@@ -1,7 +1,25 @@
 function Prices() {
   return (
     <> 
-      <h1>Ціни</h1>
+      <h1 className="flex text-2xl font-medium px-8 pb-20 pt-40 justify-center bg-linear-to-br from-red-400 via-amber-400 to-yellow-300">Ціни</h1>
+      <h2 className="text-lg mt-3">Чоловічі стрижки</h2>
+      <ul className="list-inside mt-1">
+        <li>Коротке волосся - -€</li>
+        <li>Довге волосся - -€</li>
+      </ul>
+      <h2 className="text-lg mt-3">Жіночі стрижки</h2>
+      <ul className="list-inside mt-1">
+        <li>Коротке волосся - -€</li>
+        <li>Довге волосся - -€</li>
+      </ul>
+      <h2 className="text-lg mt-3">Фарбування волосся</h2>
+      <ul className="list-inside mt-1">
+        <li>Однотонне фарбування - -€</li>
+        <li>Мелірування - -€</li>
+        <li>Інші послуги - -€</li>
+      </ul>
+
+      <div className="mt-5">* Коштовність стрижок можно уточнювати по телефону</div>
     </>
   )
 }

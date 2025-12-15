@@ -1,39 +1,46 @@
-import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { useScrollClose } from '../../hooks/useScrollClose';
 
-function NavBar() {
-  const [open, setOpen] = useState(false);
+function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: boolean) => void; closeMenu: () => void }) {
+  useScrollClose({ open, closeMenu });
 
   return (
-    <nav className="relative flex items-center justify-between py-5 px-8">
-      {/* logo */}
-      <div className="text-2xl">
-        <a href="/" className="">✂️</a>
+    <nav className="absolute w-full flex flex-col bg-white/15 backdrop-blur-sm shadow-lg overflow-hidden transform-gpu">
+      <div className="flex items-center justify-between py-7 px-11 w-full">
+        {/* logo */}
+        <div className="text-3xl">
+          <Link to="/" onClick={closeMenu}>✂️</Link>
+        </div>
+
+        {/* desktop menu items */}
+        <ul className="hidden md:flex gap-10">
+          <Link to="/">Головна</Link>
+          <Link to="/prices">Ціни</Link>
+          <Link to="/gallery">Галерея</Link>
+          <Link to="/contacts">Контакти</Link>
+        </ul>
+
+        {/* mobile menu button */}
+        <button
+          className="md:hidden text-3xl"
+          onClick={() => setOpen(!open)}
+        >
+          ☰
+        </button>
       </div>
 
-      {/* desctop menu items */}
-      <ul className="hidden md:flex gap-10 text-lg">
-          <a href="/" className="">Головна</a>
-          <a href="/prices" className="">Ціни</a>
-          <a href="/gallery" className="">Галерея</a>
-          <a href="/contacts" className="">Контакти</a>
-      </ul>
-
-      {/* mobile menu button */}
-      <button
-        className="md:hidden text-2xl"
-        onClick={() => setOpen(!open)}
-      >
-        ☰
-      </button>
-      {/* mobile menu items */}
-      {open &&
-        <div className="absolute left-0 right-0 top-full flex flex-col px-6 py-5 gap-4 tracking-wide md:hidden bg-gray-300 z-10">
-          <a href="/" className="">Головна</a>
-          <a href="/prices" className="">Ціни</a>
-          <a href="/gallery" className="">Галерея</a>
-          <a href="/contacts" className="">Контакти</a>
+      {/* mobile menu */}
+      <div className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out
+        ${open ? "max-h-80" : "max-h-0"}`}>
+        <div className={`w-full flex flex-col px-7 py-9 pb-14 gap-6 tracking-wide text-lg
+          transition[opacity] duration-300 ease-in-out
+          ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}>
+          <Link to="/" onClick={closeMenu}>Головна</Link>
+          <Link to="/prices" onClick={closeMenu}>Ціни</Link>
+          <Link to="/gallery" onClick={closeMenu}>Галерея</Link>
+          <Link to="/contacts" onClick={closeMenu}>Контакти</Link>
         </div>
-      }
+      </div>
     </nav>
   )
 }
