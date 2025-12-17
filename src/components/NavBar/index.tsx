@@ -5,7 +5,7 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
   useScrollClose({ open, closeMenu });
 
   return (
-    <nav className="absolute w-full flex flex-col bg-white/15 backdrop-blur-sm shadow-lg overflow-hidden transform-gpu">
+    <nav className="absolute w-full flex flex-col bg-white/20 backdrop-blur-sm shadow-lg overflow-hidden transform-gpu">
       <div className="flex items-center justify-between py-7 px-11 w-full">
         {/* logo */}
         <div className="text-3xl">
@@ -32,7 +32,7 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
       {/* mobile menu */}
       <div className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out
         ${open ? "max-h-80" : "max-h-0"}`}>
-        <div className={`w-full flex flex-col px-7 py-9 pb-14 gap-6 tracking-wide text-lg
+        <div className={`w-full flex flex-col px-7 py-9 pb-16 gap-7 tracking-widest text-xl
           transition[opacity] duration-300 ease-in-out
           ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}>
           <Link to="/" onClick={closeMenu}>Головна</Link>
