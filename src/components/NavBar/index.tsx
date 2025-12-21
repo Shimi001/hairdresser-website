@@ -33,7 +33,7 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
       <div className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out
         ${open ? "max-h-80" : "max-h-0"}`}>
         <div className={`w-full flex flex-col px-7 py-9 pb-16 gap-7 tracking-widest text-xl
-          transition[opacity] duration-300 ease-in-out
+          transition[opacity] duration-300 ease-in-out 
           ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}>
           <Link to="/" onClick={closeMenu}>Головна</Link>
           <Link to="/prices" onClick={closeMenu}>Ціни</Link>
