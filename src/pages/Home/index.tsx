@@ -32,13 +32,16 @@ function Home({ closeMenu }: { closeMenu: () => void }) {
               className={index === 0 ? 'pb-6' : 'py-6'}
             >
               <h3 className="text-xl tracking-wide mb-3">
-                <span>{category.icon}</span>{category.title}
+                <span className="pr-0.5">{category.icon}</span>{category.title}
               </h3>
               <ul className="flex flex-col list-disc ml-4 gap-1 italic">
                 {category.items.map((item, i) =>
                   <li key={i} className="flex text-gray-700 items-start">
                     <span className="text-pink-400 mr-3">•</span>
-                    <span className="italic">{item}</span>
+                    <div className="flex justify-between w-full">
+                      <span className="flex italic">{item.name}</span>
+                      <span className="flex">{item.price}</span>
+                    </div>
                   </li>
                 )}
               </ul>
@@ -46,11 +49,7 @@ function Home({ closeMenu }: { closeMenu: () => void }) {
           ))}
         </div>
 
-        <Link to="/prices"
-          onClick={closeMenu}
-          className="inline-flex mx-auto rounded-md p-4 px-12 justify-center bg-linear-to-br from-indigo-300 via-violet-300 to-purple-300">
-          Переглянути ціни
-        </Link>
+        <p className="flex flex-row italic text-gray-600 mt-2"><span className="pr-1">💡</span>Точна ціна залежить від довжини та стану волосся</p>
       </section>
 
       {/* profile */}
@@ -69,7 +68,7 @@ function Home({ closeMenu }: { closeMenu: () => void }) {
       <div className="p-1 w-full bg-linear-to-r from-indigo-400 via-violet-300 to-purple-300"></div>
 
       {/* contacts */}
-      <section className="px-5 mb-20 mt-15">
+      <section className="px-5 mt-15 pb-25">
         <div className="max-w-md mx-auto space-y-6">
           {/* phone */}
           <div className="text-center">

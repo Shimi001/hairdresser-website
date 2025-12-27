@@ -15,7 +15,6 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
         {/* desktop menu items */}
         <ul className="hidden md:flex gap-10">
           <Link to="/">Головна</Link>
-          <Link to="/prices">Ціни</Link>
           <Link to="/gallery">Галерея</Link>
           <Link to="/contacts">Контакти</Link>
         </ul>
@@ -36,8 +35,7 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
           transition[opacity] duration-300 ease-in-out 
           ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}>
           <Link to="/" onClick={closeMenu}>Головна</Link>
-          <Link to="/prices" onClick={closeMenu}>Ціни</Link>
-          <Link to="/gallery" onClick={closeMenu}>Галерея</Link>
+          <Link to="/gallery" onClick={closeMenu}>Мої роботи</Link>
           <Link to="/contacts" onClick={closeMenu}>Контакти</Link>
         </div>
       </div>
