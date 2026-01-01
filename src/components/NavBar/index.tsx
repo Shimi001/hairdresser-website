@@ -5,7 +5,7 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
   useScrollClose({ open, closeMenu });
 
   return (
-    <nav className="absolute w-full flex flex-col bg-white/20 backdrop-blur-sm shadow-lg overflow-hidden transform-gpu">
+    <nav className="absolute w-full flex flex-col bg-white/10 border-b border-white/20 backdrop-blur-lg overflow-hidden transform-gpu">
       <div className="flex items-center justify-between py-7 px-11 w-full">
         {/* logo */}
         <div className="text-3xl">
@@ -21,7 +21,7 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
 
         {/* mobile menu button */}
         <button
-          className="md:hidden text-3xl"
+          className="md:hidden text-3xl text-white/60"
           onClick={() => setOpen(!open)}
         >
           ☰
@@ -29,14 +29,15 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
       </div>
 
       {/* mobile menu */}
-      <div className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out
+      <div className={`md:hidden text-white overflow-hidden transition-[max-height] duration-300 ease-in-out
         ${open ? "max-h-80" : "max-h-0"}`}>
         <div className={`w-full flex flex-col px-7 py-9 pb-16 gap-7 tracking-widest text-xl
           transition[opacity] duration-300 ease-in-out 
           ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}>
-          <Link to="/" onClick={closeMenu}>Головна</Link>
-          <Link to="/gallery" onClick={closeMenu}>Мої роботи</Link>
-          <Link to="/contacts" onClick={closeMenu}>Контакти</Link>
+          <Link to="/" onClick={closeMenu}>Послуги</Link>
+          <Link to="/" onClick={closeMenu}>Про Мене</Link>
+          <Link to="/" onClick={closeMenu}>Мої Роботи</Link>
+          <Link to="/" onClick={closeMenu}>Контакти</Link>
         </div>
       </div>
     </nav>
