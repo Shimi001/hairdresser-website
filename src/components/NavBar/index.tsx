@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { useScrollClose } from '../../hooks/useScrollClose';
+import { Link } from 'react-router-dom'
+import { useScrollClose } from '../../hooks/useScrollClose'
 
 function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: boolean) => void; closeMenu: () => void }) {
   useScrollClose({ open, closeMenu });
