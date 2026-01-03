@@ -4,7 +4,7 @@ import { Instagram } from 'lucide-react'
 function Gallery() {
     return (
         <>
-            <section className="h-min-screen py-20 bg-linear-to-b from-green-300 via-emerald-400 to-teal-400">
+            <section id="gallery" className="h-min-screen py-20 bg-linear-to-b from-green-300 via-emerald-400 to-teal-400">
                 <h1 className="flex text-2xl font-medium px-8 mb-10">Мої Роботи</h1>
                 <div className="grid grid-cols-2 px-5 mb-10">
                     {galleryImages.map((image) => (

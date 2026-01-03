@@ -2,7 +2,7 @@ import { Phone, MessageCircle, Send } from 'lucide-react'
 
 function Contacts() {
   return (
-    <section className="flex flex-col h-screen px-5 py-25 bg-linear-to-b justify-center from-rose-400 via-orange-300 to-amber-300">
+    <section id="contacts" className="flex flex-col h-screen px-5 py-25 bg-linear-to-b justify-center from-rose-400 via-orange-300 to-amber-300">
       <h1 className="text-2xl mb-12 font-medium tracking-wide">Контакти</h1>
       <div className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto">
         <div className="max-w-md mx-auto space-y-6 border-b border-white/20 pb-6 mb-6">

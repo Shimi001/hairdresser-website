@@ -9,7 +9,7 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
       <div className="flex items-center justify-between py-7 px-11 w-full">
         {/* logo */}
         <div className="text-3xl">
-          <Link to="/" onClick={closeMenu}>✂️</Link>
+          <button onClick={() => { document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }) }}>✂️</button>
         </div>
 
         {/* desktop menu items */}
@@ -34,10 +34,14 @@ function NavBar({ open, setOpen, closeMenu }: { open: boolean; setOpen: (open: b
         <div className={`w-full flex flex-col px-7 py-9 pb-16 gap-7 tracking-widest text-xl
           transition[opacity] duration-300 ease-in-out 
           ${open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"}`}>
-          <Link to="/" onClick={closeMenu}>Послуги</Link>
-          <Link to="/" onClick={closeMenu}>Про Мене</Link>
-          <Link to="/" onClick={closeMenu}>Мої Роботи</Link>
-          <Link to="/" onClick={closeMenu}>Контакти</Link>
+          <button onClick={() => { document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }) }}
+            className="text-left">Послуги</button>
+          <button onClick={() => { document.getElementById('profile')?.scrollIntoView({ behavior: 'smooth' }) }}
+            className="text-left">Про Мене</button>
+          <button onClick={() => { document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' }) }}
+            className="text-left">Мої Роботи</button>
+          <button onClick={() => { document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' }) }}
+            className="text-left">Контакти</button>
         </div>
       </div>
     </nav>

@@ -3,7 +3,7 @@ import { services } from '../../data/services'
 function Services() {
     return (
         <>
-            <section className="grid grid-col-[1fr_1fr_auto] h-min-screen px-6 py-20 bg-linear-to-b from-fuchsia-400 via-pink-400 to-rose-400">
+            <section id="services" className="grid grid-col-[1fr_1fr_auto] h-min-screen px-6 py-20 bg-linear-to-b from-fuchsia-400 via-pink-400 to-rose-400">
                 <h2 className="text-2xl mb-8 font-medium tracking-wide">Послуги</h2>
 
                 <div className="mb-4 divide-y divide-white/30">
