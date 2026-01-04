@@ -40,7 +40,7 @@ export const services = [
     },
     {
         id: 'care',
-        icon: '🌸',
+        icon: '🎀',
         title: 'Догляд',
         items: [
             { name: 'Хімічна завивка', price: 'від 100€' },
