@@ -18,9 +18,13 @@ function App() {
 
       <main className="text-white text-lg">
         <Hero />
+        <div className="text-center text-4xl text-white/30 h-15 lg:h-20 w-full bg-linear-to-b from-violet-400 to-fuchsia-400">↓</div>
         <Services />
+        <div className="h-15 lg:h-20 w-full bg-linear-to-b from-rose-400 to-blue-400"></div>
         <Profile />
+        <div className="h-15 lg:h-20 w-full bg-linear-to-b from-cyan-400 to-green-300"></div>
         <Gallery />
+        <div className="h-15 lg:h-20 w-full bg-linear-to-b from-teal-400 to-rose-400"></div>
         <Contacts />
       </main>
     </>
