@@ -10,7 +10,7 @@ function Contacts() {
   return (
     <section
       id="contacts"
-      className="min-h-screen pt-30 md:pt-35 2xl:pt-30 bg-linear-to-b justify-center from-rose-400 via-orange-300 to-amber-300"
+      className="min-h-screen pt-30 md:pt-35 2xl:pt-30 bg-linear-to-b justify-center from-rose-400 via-orange-400 to-amber-400"
     >
       <div className="px-5 md:px-16 xl:px-20 2xl:px-32">
         <div className="flex flex-col">
