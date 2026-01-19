@@ -25,12 +25,12 @@ function Services() {
                     <span className="pr-0.5">{category.icon}</span>
                     {category.title}
                   </h3>
-                  <ul className="flex flex-col list-disc mx-3 md:mx-6 xl:text-xl gap-2 lg:gap-3 italic">
+                  <ul className="flex flex-col list-disc mx-3 md:mx-6 xl:text-xl gap-2 lg:gap-3">
                     {category.items.map((item, i) => (
                       <li key={i} className="flex text-white items-start">
                         <div className="flex justify-between w-full">
-                          <span className="flex italic">{item.name}</span>
-                          <span className="flex">{item.price}</span>
+                          <span>{item.name}</span>
+                          <span className="text-white/80">{item.price}</span>
                         </div>
                       </li>
                     ))}

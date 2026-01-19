@@ -11,7 +11,7 @@ function Profile() {
           <h2 className="text-2xl xl:text-3xl px-5 md:px-2 2xl:px-0 mb-12 lg:mb-16 xl:mb-18 2xl:mb-30 2xl:mt-10 font-medium tracking-wider">
             Про Мене
           </h2>
-          <div className="grid grid-col-[1fr_auto] lg:grid-cols-[auto_1fr] bg-white/10 border border-white/20 rounded-2xl px-5 py-7 md:px-10 md:py-9 lg:py-13 xl:py-16 2xl:py-22 2xl:px-13">
+          <div className="grid grid-col-[1fr_auto] lg:grid-cols-[auto_1fr] bg-white/10 border border-white/20 rounded-2xl px-5 py-10 md:px-10 md:py-9 lg:py-13 xl:py-16 2xl:py-22 2xl:px-13">
             <div className="mb-12 lg:mb-0 lg:mr-10 2xl:mr-20 2xl:ml-10 w-full mx-auto max-w-xs flex items-center justify-center">
               <img
                 src={profile}
@@ -19,7 +19,7 @@ function Profile() {
                 className="border border-white/30 rounded-full"
               ></img>
             </div>
-            <div className="flex flex-col text-shadow-xs justify-center tracking-widest xl:text-xl space-y-7 2xl:space-y-8 italic leading-relaxe">
+            <div className="flex flex-col text-shadow-xs justify-center tracking-wide xl:text-xl space-y-10 2xl:space-y-8 leading-relaxed">
               <p>
                 Вітаю! Мене звуть Людмила, і я професійний перукар з понад
                 10-річним досвідом роботи.
